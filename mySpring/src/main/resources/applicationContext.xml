@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<beans profile="dev">
+    <bean class="myprofile.DataSource" id="devDs" >
+        <property name="url" value="ms"/>
+        <property name="name" value="ro"/>
+        <property name="password" value="ddd"/>
+    </bean>
+</beans>
+    <beans profile="prod">
+        <bean class="myprofile.DataSource" id="prodDs" >
+            <property name="url" value="ms1"/>
+            <property name="name" value="ro1"/>
+            <property name="password" value="ddd1"/>
+        </bean>
+    </beans>
+
+
+</beans>
